@@ -1,0 +1,12 @@
+{
+    "id": 1,
+    "slug": "notre-pere",
+    "title": "Notre Père",
+    "category": "Prières fondamentales",
+    "image": "assets/images/notre-pere.webp",
+    "alt": "Jésus enseigne le Notre Père à ses disciples",
+    "source": "Évangile selon saint Matthieu 6, 9-13",
+    "author": "Jésus-Christ",
+    "order": 1,
+    "content": "Notre Père, qui es aux cieux,\nque ton nom soit sanctifié,\nque ton règne vienne,\nque ta volonté soit faite sur la terre comme au ciel.\n\nDonne-nous aujourd'hui notre pain de ce jour.\nPardonne-nous nos offenses,\ncomme nous pardonnons aussi à ceux qui nous ont offensés.\nEt ne nous laisse pas entrer en tentation,\nmais délivre-nous du Mal.\n\nAmen."
+}
