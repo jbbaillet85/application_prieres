@@ -1,0 +1,354 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root {
+    --color-primary: #6f4e37;
+    --color-primary-dark: #563c2b;
+    --color-background: #f8f6f2;
+    --color-surface: #ffffff;
+    --color-text: #2d2d2d;
+    --color-text-light: #6d6d6d;
+    --color-border: #e6e1da;
+
+    --shadow: 0 8px 24px rgba(0, 0, 0, .08);
+
+    --radius: 16px;
+
+    --container-width: 1100px;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+
+    background: var(--color-background);
+    color: var(--color-text);
+
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Utilitaires
+   ========================================================================== */
+
+.container {
+    width: min(var(--container-width), 92%);
+    margin: auto;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+    background: white;
+
+    border-bottom: 1px solid var(--color-border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header__content {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 72px;
+}
+
+.brand {
+
+    display: flex;
+    align-items: center;
+
+    gap: .75rem;
+
+    color: var(--color-primary);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 1.25rem;
+}
+
+.brand__symbol {
+
+    font-size: 1.5rem;
+}
+
+.main-navigation {
+
+    display: flex;
+
+    gap: 2rem;
+}
+
+.main-navigation a {
+
+    color: var(--color-text);
+
+    text-decoration: none;
+
+    transition: .25s;
+}
+
+.main-navigation a:hover {
+
+    color: var(--color-primary);
+}
+
+.menu-button {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+
+    padding: 5rem 0;
+
+    text-align: center;
+}
+
+.hero__eyebrow {
+
+    color: var(--color-primary);
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+}
+
+.hero h1 {
+
+    margin: .5rem 0;
+
+    font-size: clamp(2.5rem,5vw,4rem);
+
+    font-family: Georgia, serif;
+}
+
+.hero__description {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--color-text-light);
+
+    font-size: 1.15rem;
+}
+
+/* ==========================================================================
+   Boutons
+   ========================================================================== */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 2rem;
+
+    padding: .9rem 1.8rem;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    transition: .25s;
+}
+
+.button--primary {
+
+    background: var(--color-primary);
+
+    color: white;
+}
+
+.button--primary:hover {
+
+    background: var(--color-primary-dark);
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.prayers-section,
+.about-section {
+
+    padding: 5rem 0;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+.section-heading__eyebrow {
+
+    color: var(--color-primary);
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    font-weight: 600;
+}
+
+.section-heading h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+}
+
+/* ==========================================================================
+   Cartes
+   ========================================================================== */
+
+.prayer-grid {
+
+    display: grid;
+
+    gap: 1.5rem;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(260px,1fr));
+}
+
+.prayer-card {
+
+    background: white;
+
+    padding: 1.5rem;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: .25s;
+}
+
+.prayer-card:hover {
+
+    transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+
+    padding: 2rem;
+
+    border-top: 1px solid var(--color-border);
+
+    text-align: center;
+
+    color: var(--color-text-light);
+
+    background: white;
+}
+
+/* ==========================================================================
+   Dialog
+   ========================================================================== */
+
+.prayer-dialog {
+
+    border: none;
+
+    border-radius: var(--radius);
+
+    width: min(700px,95%);
+
+    box-shadow: var(--shadow);
+}
+
+.prayer-dialog::backdrop {
+
+    background: rgba(0,0,0,.55);
+}
+
+.prayer-dialog__content {
+
+    padding: 2rem;
+}
+
+.prayer-dialog__close {
+
+    float: right;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width:768px){
+
+    .menu-button{
+
+        display:block;
+    }
+
+    .main-navigation{
+
+        display:none;
+    }
+
+    .hero{
+
+        padding:3rem 0;
+    }
+
+}
