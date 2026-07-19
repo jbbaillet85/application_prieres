@@ -1,21 +1,32 @@
 /* ==========================================================================
+   Application Prières
+   Styles principaux
+   ========================================================================== */
+
+/* ==========================================================================
    Variables
    ========================================================================== */
 
 :root {
+
     --color-primary: #6f4e37;
-    --color-primary-dark: #563c2b;
+    --color-primary-dark: #5a3f2d;
+
     --color-background: #f8f6f2;
     --color-surface: #ffffff;
-    --color-text: #2d2d2d;
-    --color-text-light: #6d6d6d;
-    --color-border: #e6e1da;
 
-    --shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    --color-text: #2f2f2f;
+    --color-text-light: #707070;
 
-    --radius: 16px;
+    --color-border: #e5e0d8;
 
     --container-width: 1100px;
+
+    --border-radius: 16px;
+
+    --shadow:
+        0 8px 24px rgba(0, 0, 0, .08);
+
 }
 
 /* ==========================================================================
@@ -25,35 +36,46 @@
 *,
 *::before,
 *::after {
+
     box-sizing: border-box;
+
 }
 
 html {
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     margin: 0;
 
     font-family:
         Inter,
         "Segoe UI",
         Roboto,
+        Arial,
         sans-serif;
 
     background: var(--color-background);
+
     color: var(--color-text);
 
     line-height: 1.7;
+
 }
 
 /* ==========================================================================
-   Utilitaires
+   Container
    ========================================================================== */
 
 .container {
-    width: min(var(--container-width), 92%);
-    margin: auto;
+
+    width: min(92%, var(--container-width));
+
+    margin-inline: auto;
+
 }
 
 /* ==========================================================================
@@ -61,78 +83,27 @@ body {
    ========================================================================== */
 
 .site-header {
-    background: white;
+
+    background: var(--color-surface);
 
     border-bottom: 1px solid var(--color-border);
 
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 1.5rem 0;
+
+    text-align: center;
+
 }
 
-.site-header__content {
+.site-header h1 {
 
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 72px;
-}
-
-.brand {
-
-    display: flex;
-    align-items: center;
-
-    gap: .75rem;
+    margin: 0;
 
     color: var(--color-primary);
 
-    text-decoration: none;
+    font-size: 2rem;
 
-    font-weight: bold;
+    font-family: Georgia, serif;
 
-    font-size: 1.25rem;
-}
-
-.brand__symbol {
-
-    font-size: 1.5rem;
-}
-
-.main-navigation {
-
-    display: flex;
-
-    gap: 2rem;
-}
-
-.main-navigation a {
-
-    color: var(--color-text);
-
-    text-decoration: none;
-
-    transition: .25s;
-}
-
-.main-navigation a:hover {
-
-    color: var(--color-primary);
-}
-
-.menu-button {
-
-    display: none;
-
-    border: none;
-
-    background: transparent;
-
-    font-size: 1.5rem;
-
-    cursor: pointer;
 }
 
 /* ==========================================================================
@@ -141,214 +112,82 @@ body {
 
 .hero {
 
-    padding: 5rem 0;
+    padding: 4rem 0;
 
     text-align: center;
+
 }
 
-.hero__eyebrow {
+.hero h2 {
 
-    color: var(--color-primary);
+    margin-bottom: 1rem;
 
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: .12em;
-}
-
-.hero h1 {
-
-    margin: .5rem 0;
-
-    font-size: clamp(2.5rem,5vw,4rem);
+    font-size: clamp(2rem, 4vw, 3rem);
 
     font-family: Georgia, serif;
+
 }
 
-.hero__description {
+.hero p {
 
     max-width: 650px;
 
-    margin: auto;
+    margin-inline: auto;
 
     color: var(--color-text-light);
 
     font-size: 1.15rem;
+
 }
 
 /* ==========================================================================
-   Boutons
+   Prayer list
    ========================================================================== */
 
-.button {
-
-    display: inline-block;
-
-    margin-top: 2rem;
-
-    padding: .9rem 1.8rem;
-
-    border-radius: 999px;
-
-    text-decoration: none;
-
-    transition: .25s;
-}
-
-.button--primary {
-
-    background: var(--color-primary);
-
-    color: white;
-}
-
-.button--primary:hover {
-
-    background: var(--color-primary-dark);
-}
-
-/* ==========================================================================
-   Sections
-   ========================================================================== */
-
-.prayers-section,
-.about-section {
-
-    padding: 5rem 0;
-}
-
-.section-heading {
-
-    text-align: center;
-
-    margin-bottom: 3rem;
-}
-
-.section-heading__eyebrow {
-
-    color: var(--color-primary);
-
-    text-transform: uppercase;
-
-    letter-spacing: .12em;
-
-    font-weight: 600;
-}
-
-.section-heading h2 {
-
-    font-family: Georgia, serif;
-
-    font-size: 2rem;
-}
-
-/* ==========================================================================
-   Cartes
-   ========================================================================== */
-
-.prayer-grid {
+#prayer-list {
 
     display: grid;
 
     gap: 1.5rem;
 
-    grid-template-columns:
-        repeat(auto-fit,minmax(260px,1fr));
-}
+    margin: 3rem 0;
 
-.prayer-card {
-
-    background: white;
-
-    padding: 1.5rem;
-
-    border-radius: var(--radius);
-
-    box-shadow: var(--shadow);
-
-    transition: .25s;
-}
-
-.prayer-card:hover {
-
-    transform: translateY(-4px);
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 
-.site-footer {
+footer {
 
     padding: 2rem;
-
-    border-top: 1px solid var(--color-border);
 
     text-align: center;
 
     color: var(--color-text-light);
 
-    background: white;
-}
+    border-top: 1px solid var(--color-border);
 
-/* ==========================================================================
-   Dialog
-   ========================================================================== */
+    background: var(--color-surface);
 
-.prayer-dialog {
-
-    border: none;
-
-    border-radius: var(--radius);
-
-    width: min(700px,95%);
-
-    box-shadow: var(--shadow);
-}
-
-.prayer-dialog::backdrop {
-
-    background: rgba(0,0,0,.55);
-}
-
-.prayer-dialog__content {
-
-    padding: 2rem;
-}
-
-.prayer-dialog__close {
-
-    float: right;
-
-    border: none;
-
-    background: transparent;
-
-    font-size: 2rem;
-
-    cursor: pointer;
 }
 
 /* ==========================================================================
    Responsive
    ========================================================================== */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .menu-button{
+    .hero {
 
-        display:block;
+        padding: 2.5rem 0;
+
     }
 
-    .main-navigation{
+    .site-header h1 {
 
-        display:none;
-    }
+        font-size: 1.7rem;
 
-    .hero{
-
-        padding:3rem 0;
     }
 
 }
