@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Application de prières catholiques simple, installable et utilisable hors ligne.">
+  <meta name="theme-color" content="#6f4e37">
+
+  <title>Mes Prières</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container site-header__content">
+      <a class="brand" href="index.html" aria-label="Accueil de Mes Prières">
+        <span class="brand__symbol" aria-hidden="true">✝</span>
+        <span class="brand__name">Mes Prières</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-controls="main-navigation"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true">☰</span>
+      </button>
+
+      <nav id="main-navigation" class="main-navigation" aria-label="Navigation principale">
+        <a href="#prieres">Prières</a>
+        <a href="#apropos">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Application de prières catholiques</p>
+        <h1>Un temps de prière, simplement.</h1>
+        <p class="hero__description">
+          Retrouvez vos prières essentielles dans une application claire,
+          légère et utilisable hors ligne.
+        </p>
+        <a class="button button--primary" href="#prieres">Voir les prières</a>
+      </div>
+    </section>
+
+    <section id="prieres" class="prayers-section" aria-labelledby="prayers-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Bibliothèque</p>
+          <h2 id="prayers-title">Choisissez une prière</h2>
+          <p>Les prières seront chargées depuis le fichier <code>data/prieres.json</code>.</p>
+        </div>
+
+        <div id="prayer-list" class="prayer-grid" aria-live="polite" aria-busy="true">
+          <p class="loading-message">Chargement des prières…</p>
+        </div>
+
+        <noscript>
+          <p class="noscript-message">
+            JavaScript doit être activé pour afficher la liste des prières.
+          </p>
+        </noscript>
+      </div>
+    </section>
+
+    <section id="apropos" class="about-section" aria-labelledby="about-title">
+      <div class="container about-section__content">
+        <div>
+          <p class="section-heading__eyebrow">À propos</p>
+          <h2 id="about-title">Une application sobre et respectueuse</h2>
+        </div>
+        <p>
+          Mes Prières est conçue pour fonctionner sans compte, sans publicité
+          et sans collecte de données personnelles.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__content">
+      <p>© <span id="current-year">2026</span> Jean-Baptiste Baillet</p>
+      <p>Application distribuée sous licence MIT.</p>
+    </div>
+  </footer>
+
+  <dialog id="prayer-dialog" class="prayer-dialog">
+    <article class="prayer-dialog__content">
+      <button
+        id="close-prayer-dialog"
+        class="prayer-dialog__close"
+        type="button"
+        aria-label="Fermer la prière"
+      >
+        ×
+      </button>
+
+      <p id="prayer-dialog-category" class="prayer-dialog__category"></p>
+      <h2 id="prayer-dialog-title"></h2>
+      <div id="prayer-dialog-text" class="prayer-dialog__text"></div>
+    </article>
+  </dialog>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
