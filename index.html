@@ -39,50 +39,65 @@
   </header>
 
   <main>
+    <main>
+
     <section class="hero">
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Application de prières catholiques</p>
-        <h1>Un temps de prière, simplement.</h1>
-        <p class="hero__description">
-          Retrouvez vos prières essentielles dans une application claire,
-          légère et utilisable hors ligne.
-        </p>
-        <a class="button button--primary" href="#prieres">Voir les prières</a>
-      </div>
-    </section>
 
-    <section id="prieres" class="prayers-section" aria-labelledby="prayers-title">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-heading__eyebrow">Bibliothèque</p>
-          <h2 id="prayers-title">Choisissez une prière</h2>
-          <p>Les prières seront chargées depuis le fichier <code>data/prieres.json</code>.</p>
+        <div class="container">
+
+            <h2>
+
+                Un temps de prière, simplement.
+
+            </h2>
+
+            <p>
+
+                Retrouvez vos prières favorites,
+                même sans connexion Internet.
+
+            </p>
+
         </div>
 
-        <div id="prayer-list" class="prayer-grid" aria-live="polite" aria-busy="true">
-          <p class="loading-message">Chargement des prières…</p>
-        </div>
-
-        <noscript>
-          <p class="noscript-message">
-            JavaScript doit être activé pour afficher la liste des prières.
-          </p>
-        </noscript>
-      </div>
     </section>
 
-    <section id="apropos" class="about-section" aria-labelledby="about-title">
-      <div class="container about-section__content">
-        <div>
-          <p class="section-heading__eyebrow">À propos</p>
-          <h2 id="about-title">Une application sobre et respectueuse</h2>
+    <section id="prieres">
+
+        <div class="container">
+
+            <div id="prayer-list">
+
+                Chargement...
+
+            </div>
+
         </div>
-        <p>
-          Mes Prières est conçue pour fonctionner sans compte, sans publicité
-          et sans collecte de données personnelles.
-        </p>
-      </div>
+
     </section>
+
+</main>
+
+<dialog id="prayer-dialog">
+
+    <button id="close-dialog">
+
+        ✕
+
+    </button>
+
+    <img
+        id="dialog-image"
+        src=""
+        alt="">
+
+    <h2 id="dialog-title"></h2>
+
+    <p id="dialog-category"></p>
+
+    <article id="dialog-content"></article>
+
+</dialog>
   </main>
 
   <footer class="site-footer">
