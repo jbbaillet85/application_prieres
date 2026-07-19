@@ -1,12 +1,43 @@
 {
     "id": 2,
     "slug": "je-vous-salue-marie",
+
     "title": "Je vous salue Marie",
+    "subtitle": "La grande prière mariale",
+
     "category": "Prières mariales",
+
+    "tags": [
+        "marie",
+        "rosaire",
+        "quotidien"
+    ],
+
     "image": "assets/images/je-vous-salue-marie.webp",
-    "alt": "La Vierge Marie",
-    "source": "Évangile selon saint Luc 1, 28 et 42",
+    "thumbnail": "assets/images/thumbnails/je-vous-salue-marie.webp",
+
+    "audio": null,
+
     "author": "Tradition de l'Église",
+
+    "source": {
+        "type": "Bible",
+        "reference": "Luc 1, 28 et 42"
+    },
+
+    "language": "fr",
+
+    "favorite": false,
+
     "order": 2,
-    "content": "Je vous salue, Marie, pleine de grâce ;\nle Seigneur est avec vous.\nVous êtes bénie entre toutes les femmes,\net Jésus, le fruit de vos entrailles, est béni.\n\nSainte Marie, Mère de Dieu,\npriez pour nous, pauvres pécheurs,\nmaintenant et à l'heure de notre mort.\n\nAmen."
+
+    "content": "Je vous salue, Marie, pleine de grâce ;\nLe Seigneur est avec vous.\nVous êtes bénie entre toutes les femmes,\net Jésus, le fruit de vos entrailles, est béni.\n\nSainte Marie, Mère de Dieu,\npriez pour nous, pauvres pécheurs,\nmaintenant et à l'heure de notre mort.\nAmen.",
+
+    "latin": "Ave Maria,\ngratia plena,\nDominus tecum.\nBenedicta tu in mulieribus,\net benedictus fructus ventris tui, Iesus.\nSancta Maria, Mater Dei,\nora pro nobis peccatoribus,\nnunc et in hora mortis nostrae.\nAmen.",
+
+    "notes": "",
+
+    "version": "AELF",
+
+    "updated_at": "2026-07-20"
 }
