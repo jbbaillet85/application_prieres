@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "slug": "notre-pere",
+        "title": "Notre Père",
+        "category": "Prières fondamentales",
+        "image": "assets/images/notre-pere.webp",
+        "thumbnail": "assets/images/thumbnails/notre-pere.webp",
+        "file": "data/prayers/notre-pere.json",
+        "order": 1
+    },
+    {
+        "id": 2,
+        "slug": "je-vous-salue-marie",
+        "title": "Je vous salue Marie",
+        "category": "Prières mariales",
+        "image": "assets/images/je-vous-salue-marie.webp",
+        "thumbnail": "assets/images/thumbnails/je-vous-salue-marie.webp",
+        "file": "data/prayers/je-vous-salue-marie.json",
+        "order": 2
+    }
+]
