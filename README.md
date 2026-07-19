@@ -6,6 +6,8 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/jbbaillet85/application_prieres)
 ![GitHub Pages](https://img.shields.io/badge/PWA-ready-success)
 ![Offline](https://img.shields.io/badge/Offline-Yes-blue)
+[![wakatime](https://wakatime.com/badge/github/jbbaillet85/application_prieres.svg)](https://wakatime.com/badge/github/jbbaillet85/application_prieres)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d1a1817e0934465992ba341381bc29d5)](https://app.codacy.com/gh/jbbaillet85/application_prieres/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 ---
 
