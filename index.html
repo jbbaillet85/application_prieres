@@ -2,115 +2,209 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Application de prières catholiques simple, installable et utilisable hors ligne.">
-  <meta name="theme-color" content="#6f4e37">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Application de prières catholiques simple, installable et utilisable hors ligne."
+  >
+
+  <meta
+    name="theme-color"
+    content="#6f4e37"
+  >
 
   <title>Mes Prières</title>
 
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="assets/icons/icon-192.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="manifest"
+    href="manifest.json"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="192x192"
+    href="assets/icons/icon-192.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="assets/icons/icon-192.png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
 </head>
 
 <body>
   <header class="site-header">
     <div class="container site-header__content">
-      <a class="brand" href="index.html" aria-label="Accueil de Mes Prières">
-        <span class="brand__symbol" aria-hidden="true">✝</span>
-        <span class="brand__name">Mes Prières</span>
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Accueil de Mes Prières"
+      >
+        <span
+          class="brand__symbol"
+          aria-hidden="true"
+        >
+          ✝
+        </span>
+
+        <span class="brand__name">
+          Mes Prières
+        </span>
       </a>
 
       <button
+        id="menu-button"
         class="menu-button"
         type="button"
         aria-label="Ouvrir le menu"
         aria-controls="main-navigation"
         aria-expanded="false"
       >
-        <span aria-hidden="true">☰</span>
+        <span aria-hidden="true">
+          ☰
+        </span>
       </button>
 
-      <nav id="main-navigation" class="main-navigation" aria-label="Navigation principale">
-        <a href="#prieres">Prières</a>
-        <a href="#apropos">À propos</a>
+      <nav
+        id="main-navigation"
+        class="main-navigation"
+        aria-label="Navigation principale"
+      >
+        <a href="#prieres">
+          Prières
+        </a>
+
+        <a href="#apropos">
+          À propos
+        </a>
       </nav>
     </div>
   </header>
 
   <main>
-    <main>
-
     <section class="hero">
+      <div class="container hero__content">
+        <p class="hero__eyebrow">
+          Application de prières catholiques
+        </p>
 
-        <div class="container">
+        <h1>
+          Un temps de prière, simplement.
+        </h1>
 
-            <h2>
+        <p class="hero__description">
+          Retrouvez vos prières essentielles dans une application claire,
+          légère et utilisable hors ligne.
+        </p>
 
-                Un temps de prière, simplement.
-
-            </h2>
-
-            <p>
-
-                Retrouvez vos prières favorites,
-                même sans connexion Internet.
-
-            </p>
-
-        </div>
-
+        <a
+          class="button button--primary"
+          href="#prieres"
+        >
+          Voir les prières
+        </a>
+      </div>
     </section>
 
-    <section id="prieres">
+    <section
+      id="prieres"
+      class="prayers-section"
+      aria-labelledby="prayers-title"
+    >
+      <div class="container">
+        <header class="section-heading">
+          <p class="section-heading__eyebrow">
+            Bibliothèque
+          </p>
 
-        <div class="container">
+          <h2 id="prayers-title">
+            Choisissez une prière
+          </h2>
 
-            <div id="prayer-list">
+          <p>
+            Cliquez sur une image ou sur une carte pour ouvrir la prière.
+          </p>
+        </header>
 
-                Chargement...
-
-            </div>
-
+        <div
+          id="prayer-list"
+          class="prayer-grid"
+          aria-live="polite"
+          aria-busy="true"
+        >
+          <p class="loading-message">
+            Chargement des prières…
+          </p>
         </div>
 
+        <noscript>
+          <p class="noscript-message">
+            JavaScript doit être activé pour afficher les prières.
+          </p>
+        </noscript>
+      </div>
     </section>
 
-</main>
+    <section
+      id="apropos"
+      class="about-section"
+      aria-labelledby="about-title"
+    >
+      <div class="container about-section__content">
+        <div>
+          <p class="section-heading__eyebrow">
+            À propos
+          </p>
 
-<dialog id="prayer-dialog">
+          <h2 id="about-title">
+            Une application sobre et respectueuse
+          </h2>
+        </div>
 
-    <button id="close-dialog">
-
-        ✕
-
-    </button>
-
-    <img
-        id="dialog-image"
-        src=""
-        alt="">
-
-    <h2 id="dialog-title"></h2>
-
-    <p id="dialog-category"></p>
-
-    <article id="dialog-content"></article>
-
-</dialog>
+        <p>
+          Mes Prières fonctionne sans compte, sans publicité et sans collecte
+          de données personnelles. Les prières restent accessibles hors ligne
+          après leur mise en cache.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container site-footer__content">
-      <p>© <span id="current-year">2026</span> Jean-Baptiste Baillet</p>
-      <p>Application distribuée sous licence MIT.</p>
+      <p>
+        ©
+        <span id="current-year">
+          2026
+        </span>
+        Jean-Baptiste Baillet
+      </p>
+
+      <p>
+        Application distribuée sous licence MIT.
+      </p>
     </div>
   </footer>
 
-  <dialog id="prayer-dialog" class="prayer-dialog">
+  <dialog
+    id="prayer-dialog"
+    class="prayer-dialog"
+    aria-labelledby="dialog-title"
+  >
     <article class="prayer-dialog__content">
       <button
-        id="close-prayer-dialog"
+        id="close-dialog"
         class="prayer-dialog__close"
         type="button"
         aria-label="Fermer la prière"
@@ -118,12 +212,52 @@
         ×
       </button>
 
-      <p id="prayer-dialog-category" class="prayer-dialog__category"></p>
-      <h2 id="prayer-dialog-title"></h2>
-      <div id="prayer-dialog-text" class="prayer-dialog__text"></div>
+      <img
+        id="dialog-image"
+        class="prayer-dialog__image"
+        src=""
+        alt=""
+      >
+
+      <p
+        id="dialog-category"
+        class="prayer-dialog__category"
+      ></p>
+
+      <h2 id="dialog-title"></h2>
+
+      <p
+        id="dialog-subtitle"
+        class="prayer-dialog__subtitle"
+      ></p>
+
+      <p
+        id="dialog-source"
+        class="prayer-dialog__source"
+      ></p>
+
+      <div
+        id="dialog-content"
+        class="prayer-dialog__text"
+      ></div>
+
+      <section
+        id="dialog-latin-section"
+        class="prayer-dialog__latin"
+        hidden
+      >
+        <h3>
+          Version latine
+        </h3>
+
+        <div id="dialog-latin"></div>
+      </section>
     </article>
   </dialog>
 
-  <script src="js/app.js" defer></script>
+  <script
+    type="module"
+    src="js/app.js"
+  ></script>
 </body>
 </html>
