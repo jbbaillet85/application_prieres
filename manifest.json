@@ -1,0 +1,33 @@
+{
+  "name": "Mes Prières",
+  "short_name": "Prières",
+  "description": "Application de prières catholiques simple, installable et utilisable hors ligne.",
+  "id": "/application_prieres/",
+  "start_url": "/application_prieres/",
+  "scope": "/application_prieres/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f2eb",
+  "theme_color": "#6f4e37",
+  "lang": "fr-FR",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
