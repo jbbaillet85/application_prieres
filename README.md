@@ -2,7 +2,7 @@
 
 > Une Progressive Web App (PWA) permettant de consulter les principales prières catholiques, entièrement hors ligne.
 
-![GitHub License](https://img.shields.io/github/license/jbbaillet85/application_prieres)
+[![GitHub license](https://img.shields.io/github/license/jbbaillet85/application_prieres)](LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jbbaillet85/application_prieres)
 ![GitHub Pages](https://img.shields.io/badge/PWA-ready-success)
 ![Offline](https://img.shields.io/badge/Offline-Yes-blue)
@@ -10,6 +10,8 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d1a1817e0934465992ba341381bc29d5)](https://app.codacy.com/gh/jbbaillet85/application_prieres/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 ---
+
+## https://jbbaillet85.github.io/application_prieres/
 
 ## ✨ Fonctionnalités
 
