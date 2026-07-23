@@ -143,15 +143,14 @@ body {
 /* ==========================================================================
    Prayer list
    ========================================================================== */
-
 #prayer-list {
-
     display: grid;
-
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 260px), 1fr)
+    );
     gap: 1.5rem;
-
     margin: 3rem 0;
-
 }
 
 /* ==========================================================================
@@ -173,6 +172,75 @@ footer {
 }
 
 /* ==========================================================================
+   Images
+   ========================================================================== */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.prayer-card {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background: var(--color-surface);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.prayer-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.prayer-card h2,
+.prayer-card p {
+    margin-inline: 1.25rem;
+}
+
+.prayer-card h2 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.prayer-card p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: var(--color-text-light);
+}
+
+.prayer-dialog {
+    width: min(92%, 760px);
+    max-height: 90vh;
+    padding: 0;
+    overflow-y: auto;
+    border: 0;
+    border-radius: var(--border-radius);
+    background: var(--color-surface);
+    box-shadow: var(--shadow);
+}
+
+.prayer-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.prayer-dialog__content {
+    position: relative;
+    padding: 1.5rem;
+}
+
+.prayer-dialog__image {
+    width: 100%;
+    max-height: min(55vh, 520px);
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+    border-radius: calc(var(--border-radius) - 4px);
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 
@@ -189,5 +257,21 @@ footer {
         font-size: 1.7rem;
 
     }
+    .prayer-dialog {
+    width: calc(100% - 1rem);
+    max-height: calc(100vh - 1rem);
+}
+
+.prayer-dialog__content {
+    padding: 1rem;
+}
+
+.prayer-dialog__image {
+    max-height: 45vh;
+}
+
+.prayer-card img {
+    aspect-ratio: 4 / 3;
+}
 
 }
